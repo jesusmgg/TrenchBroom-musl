@@ -24,7 +24,7 @@
 #include "StackWalker.h"
 #endif
 #else
-#include <execinfo.h>
+#include "execinfo.h"
 #endif
 
 #include "TrenchBroomStackWalker.h"

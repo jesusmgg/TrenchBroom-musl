@@ -270,6 +270,7 @@ set(COMMON_SOURCE
         ${COMMON_SOURCE_DIR}/Thread.cpp
         ${COMMON_SOURCE_DIR}/TrenchBroomApp.cpp
         ${COMMON_SOURCE_DIR}/TrenchBroomStackWalker.cpp
+        ${COMMON_SOURCE_DIR}/execinfo.cpp
         ${COMMON_SOURCE_DIR}/ui/AboutDialog.cpp
         ${COMMON_SOURCE_DIR}/ui/ActionBuilder.cpp
         ${COMMON_SOURCE_DIR}/ui/ActionContext.cpp
@@ -805,6 +806,7 @@ set(COMMON_HEADER
         ${COMMON_SOURCE_DIR}/Thread.h
         ${COMMON_SOURCE_DIR}/TrenchBroomApp.h
         ${COMMON_SOURCE_DIR}/TrenchBroomStackWalker.h
+        ${COMMON_SOURCE_DIR}/execinfo.h
         ${COMMON_SOURCE_DIR}/ui/AboutDialog.h
         ${COMMON_SOURCE_DIR}/ui/ActionBuilder.h
         ${COMMON_SOURCE_DIR}/ui/ActionContext.h
