@@ -12,6 +12,9 @@ TrenchBroom is a modern cross-platform level editor for Quake-engine based games
 - Video Tutorial Series:  https://www.youtube.com/playlist?list=PLgDKRPte5Y0AZ_K_PZbWbgBAEt5xf74aE
 - Manual:    https://trenchbroom.github.io/manual/latest
 
+## musl libc compatibility
+This fork simply hacks the `execinfo` library requirement to make TrenchBroom buildable on musl libc systems like Alpine Linux. Tested on Alpine 3.20.3, but should work in other versions just fine.
+
 ## Features
 * **General**
 	- Full support for editing in 3D and in up to three 2D views
