@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2010 Kristian Duske
+ Copyright (C) 2025 Kristian Duske
 
  This file is part of TrenchBroom.
 
@@ -17,15 +17,17 @@
  along with TrenchBroom. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#include "FileSystemMetadata.h"
 
-namespace tb::ui
+#include <ostream>
+
+namespace tb::io
 {
 
-enum class MapTextEncoding
+std::ostream& operator<<(std::ostream& lhs, const FileSystemMetadata& rhs)
 {
-  Quake,
-  Utf8,
-};
+  std::visit([&lhs](const auto& x) { lhs << x; }, rhs);
+  return lhs;
+}
 
-} // namespace tb::ui
+} // namespace tb::io

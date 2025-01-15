@@ -1,5 +1,5 @@
 /*
- Copyright (C) 2010 Kristian Duske
+ Copyright (C) 2025 Kristian Duske
 
  This file is part of TrenchBroom.
 
@@ -19,13 +19,19 @@
 
 #pragma once
 
-namespace tb::ui
-{
+#include <filesystem>
+#include <iosfwd>
+#include <variant>
 
-enum class MapTextEncoding
+namespace tb::io
 {
-  Quake,
-  Utf8,
-};
+namespace FileSystemMetadataKeys
+{
+constexpr auto ImageFilePath = "FileSystemMetadataKeys::ImageFilePath";
+}
 
-} // namespace tb::ui
+using FileSystemMetadata = std::variant<std::filesystem::path>;
+
+std::ostream& operator<<(std::ostream& lhs, const FileSystemMetadata& rhs);
+
+} // namespace tb::io
